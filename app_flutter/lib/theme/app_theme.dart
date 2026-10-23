@@ -16,7 +16,7 @@ class AppColors {
 
 class AppTheme {
   static ThemeData light() {
-    final base = ThemeData.light(useMaterial3: true);
+    final base = ThemeData(useMaterial3: true, brightness: Brightness.light, fontFamily: 'Inter');
 
     return base.copyWith(
       scaffoldBackgroundColor: AppColors.paper,

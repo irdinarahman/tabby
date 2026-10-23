@@ -91,9 +91,9 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 Row(
                   children: [
-                    Expanded(child: _SummaryCard(label: "You're owed", value: owed)),
-                    const SizedBox(width: 12),
-                    Expanded(child: _SummaryCard(label: 'You owe', value: -owe)),
+                    Expanded(child: _SummaryCard(label: "You're owed", value: owed, color: AppColors.teal)),
+                      const SizedBox(width: 12),
+                    Expanded(child: _SummaryCard(label: 'You owe', value: owe, color: AppColors.coral)),
                   ],
                 ),
                 const SizedBox(height: 24),
@@ -112,7 +112,8 @@ class _HomeScreenState extends State<HomeScreen> {
 class _SummaryCard extends StatelessWidget {
   final String label;
   final double value;
-  const _SummaryCard({required this.label, required this.value});
+  final Color color;
+  const _SummaryCard({required this.label, required this.value, required this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -124,7 +125,19 @@ class _SummaryCard extends StatelessWidget {
           children: [
             Text(label, style: const TextStyle(fontSize: 12, color: AppColors.ink)),
             const SizedBox(height: 8),
-            BalancePill(value: value, large: true),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              alignment: Alignment.centerLeft,
+              child: Text(
+                formatCurrency(value),
+                style: TextStyle(
+                  fontFamily: 'Sora',
+                  fontWeight: FontWeight.w600,
+                  fontSize: 24,
+                  color: color,
+                ),
+              ),
+            ),
           ],
         ),
       ),
