@@ -1,0 +1,24 @@
+<svg viewBox="0 0 260 280" xmlns="http://www.w3.org/2000/svg">
+  <path d="M172 235 Q218 228 222 185 Q224 155 198 160" fill="none" stroke="#2B231C" stroke-width="6" stroke-linecap="round"/>
+  <path d="M172 235 Q216 228 220 187 Q222 158 200 162" fill="none" stroke="#C97D3A" stroke-width="12" stroke-linecap="round"/>
+  <path d="M70 264 Q60 184 100 169 Q120 159 140 169 Q180 184 170 264 Z" fill="#C97D3A" stroke="#2B231C" stroke-width="6"/>
+  <ellipse cx="120" cy="229" rx="30" ry="34" fill="#FBF7EF"/>
+  <ellipse cx="95" cy="260" rx="16" ry="10" fill="#C97D3A" stroke="#2B231C" stroke-width="5"/>
+  <ellipse cx="145" cy="260" rx="16" ry="10" fill="#C97D3A" stroke="#2B231C" stroke-width="5"/>
+  <path d="M82 90 L60 45 L102 75 Z" fill="#C97D3A" stroke="#2B231C" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M158 90 L180 45 L138 75 Z" fill="#C97D3A" stroke="#2B231C" stroke-width="6" stroke-linejoin="round"/>
+  <circle cx="120" cy="130" r="58" fill="#C97D3A" stroke="#2B231C" stroke-width="6"/>
+  <path d="M104 84 L100 100" stroke="#8B4A32" stroke-width="5" stroke-linecap="round"/>
+  <path d="M120 80 L120 98" stroke="#8B4A32" stroke-width="5" stroke-linecap="round"/>
+  <path d="M136 84 L140 100" stroke="#8B4A32" stroke-width="5" stroke-linecap="round"/>
+  <path d="M92 132 Q100 124 108 132" stroke="#2B231C" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M132 132 Q140 124 148 132" stroke="#2B231C" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M114 150 L126 150 L120 158 Z" fill="#2B231C"/>
+  <path d="M120 158 Q120 166 108 170" stroke="#2B231C" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M120 158 Q120 166 132 170" stroke="#2B231C" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M66 138 L54 136" stroke="#8B4A32" stroke-width="4" stroke-linecap="round"/>
+  <path d="M174 138 L186 136" stroke="#8B4A32" stroke-width="4" stroke-linecap="round"/>
+  <path d="M56 60 L59 68 L67 71 L59 74 L56 82 L53 74 L45 71 L53 68 Z" fill="#2F6E5E"/>
+  <path d="M208 78 L210 84 L216 86 L210 88 L208 94 L206 88 L200 86 L206 84 Z" fill="#2F6E5E"/>
+  <path d="M200 210 L202 216 L208 218 L202 220 L200 226 L198 220 L192 218 L198 216 Z" fill="#2F6E5E"/>
+</svg>
