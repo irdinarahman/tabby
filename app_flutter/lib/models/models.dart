@@ -1,3 +1,5 @@
+import '../services/current_user.dart';
+
 class Member {
   final String id;
   final String? userId;
@@ -183,7 +185,20 @@ class TabDetail {
 
   double get totalSpent => expenses.fold(0.0, (sum, e) => sum + e.amount);
 
+  /// The member row that belongs to the logged-in user, if any.
+  Member? get me {
+    final userId = CurrentUser.instance.id;
+    if (userId == null) return null;
+    for (final m in members) {
+      if (m.userId == userId) return m;
+    }
+    return null;
+  }
+
   String memberName(String id) {
-    return members.firstWhere((m) => m.id == id, orElse: () => Member(id: id, displayName: '?')).displayName;
+    for (final m in members) {
+      if (m.id == id) return m.displayName;
+    }
+    return '?';
   }
 }

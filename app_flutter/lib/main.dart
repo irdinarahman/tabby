@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'screens/app_shell.dart';
 import 'screens/auth_screen.dart';
-import 'screens/home_screen.dart';
 import 'services/api_client.dart';
 import 'theme/app_theme.dart';
 
@@ -22,8 +22,8 @@ class TabbyApp extends StatelessWidget {
   }
 }
 
-/// Restores a saved session (if any) before deciding whether to show the
-/// login screen or drop straight into the home dashboard.
+/// Restores a saved login (without needing the network) and decides whether
+/// to show the login screen or go straight into the app.
 class _StartupGate extends StatefulWidget {
   const _StartupGate();
 
@@ -33,7 +33,7 @@ class _StartupGate extends StatefulWidget {
 
 class _StartupGateState extends State<_StartupGate> {
   final _api = ApiClient();
-  late Future<bool> _restoring;
+  late final Future<bool> _restoring;
 
   @override
   void initState() {
@@ -50,7 +50,7 @@ class _StartupGateState extends State<_StartupGate> {
           return const Scaffold(body: Center(child: CircularProgressIndicator()));
         }
         final loggedIn = snapshot.data ?? false;
-        return loggedIn ? HomeScreen(api: _api) : AuthScreen(api: _api);
+        return loggedIn ? AppShell(api: _api) : AuthScreen(api: _api);
       },
     );
   }
